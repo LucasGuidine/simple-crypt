@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criptografador de texto</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <span class="eyebrow">Ferramenta local</span>
+        <h1>Criptografador de texto</h1>
+        <p>Proteja uma mensagem com uma senha. Nada é enviado para a internet.</p>
+      </header>
+
+      <section class="panel" aria-label="Criptografar ou descriptografar texto">
+        <label for="password">Senha</label>
+        <div class="password-row">
+          <input id="password" type="password" autocomplete="new-password" placeholder="Digite uma senha segura" />
+          <button id="toggle-password" class="button secondary" type="button" aria-label="Mostrar senha">Mostrar</button>
+        </div>
+
+        <label for="input-text">Texto</label>
+        <textarea id="input-text" rows="7" placeholder="Digite ou cole o texto aqui"></textarea>
+
+        <div class="actions">
+          <button id="encrypt" class="button primary" type="button">Criptografar</button>
+          <button id="decrypt" class="button secondary" type="button">Descriptografar</button>
+        </div>
+
+        <label for="output-text">Resultado</label>
+        <textarea id="output-text" rows="7" readonly placeholder="O resultado aparecerá aqui"></textarea>
+
+        <div class="result-actions">
+          <button id="copy" class="button secondary" type="button">Copiar resultado</button>
+          <span id="status" role="status" aria-live="polite"></span>
+        </div>
+      </section>
+
+      <p class="note"><strong>Importante:</strong> use a mesma senha para descriptografar. Se você perdê-la, não será possível recuperar o texto.</p>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
